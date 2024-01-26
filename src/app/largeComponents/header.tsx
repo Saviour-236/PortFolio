@@ -16,14 +16,15 @@ function Header() {
     {icon:<MdOutlineCloudDownload />,detail:'sf' }])
   return (
     <>
-       <div className=" item-center   flex place-content-between border-b border-slate-700 h-fit-content items-center w-[100%] text-[1.2rem] font-serif">
-            <div className=' flex items-center m-[1rem] mt-[1rem]   text-white space-x-[5px] font-bold '>
+       <div className=" item-center   flex place-content-between border-b border-slate-700 h-fit-content items-center w-[100%] text-[2rem] font-serif">
+            <div className=' flex items-center m-[1rem] mt-[1rem]   text-white   space-x-[3rem] font-bold '>
             <button>
             <img src='https://img.freepik.com/premium-photo/minimalist-feather-design_802059-3.jpg?size=626&ext=jpg&uid=R122479474&ga=GA1.1.1034689284.1705596486&semt=ais ' className='rounded-full h-[3rem] w-[3rem]'/>
             </button>
-            <p >
+            <p className='max-lg:hidden'>
               Welcome To My PortFolio
             </p>
+            <p className='lg:hidden'>PortFolio</p>
             </div>
             <div>
             <SocialLinks icons={icons} />
