@@ -45,7 +45,7 @@ export default function SocialLinks(icons:any) {
          </button>
   
          { active ?
-           (<div className='absolute   mt-[1rem] ml-[-80vw] w-[80vw] place-items-center w-[2rem] text-[1rem]'>{iconDetail} 
+           (<div className='absolute w-fit  mt-[1rem] ml-[-80vw] w-[80vw] place-items-center w-[2rem] text-[1rem]'>{iconDetail} 
            {copied?<div className=' font-serif font-bold bg-[#1a1b1c]' >Copied </div>:<div className='hidden'>no</div>}
            </div>) : (
              <></>
