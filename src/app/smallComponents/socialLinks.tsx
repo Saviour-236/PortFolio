@@ -10,8 +10,9 @@ import { BsCopy } from "react-icons/bs";
 export default function SocialLinks(icons:any) {
   const [data,setData]=useState(icons)
   const a = icons.icons.map((item:any) => (
-    <button onClick={()=>copyData(item.detail)}>
+    <button className='flex space-x-[0.5rem]' onClick={()=>copyData(item.detail)}>
       {item.icon}
+      <Clipboard data = {item.detail}/>
     </button>
   ))
   const [copied,setCopied] = useState(false) //for pop up when text copied
@@ -25,11 +26,11 @@ export default function SocialLinks(icons:any) {
       setactive(!active);
       
     } //changing the active state according to click
+    
     const iconDetail = icons1.map((item:any) => (
-      <div key={item.id} className='flex  items-center t rounded bg-[#014c57] p-[0.5rem] font-bold' >
+      <div key={item.id} className='flex  items-center text-[0.8rem] space-x-[6rem] rounded bg-[#1a1b1c] p-[0.5rem] font-bold' >
         {item.detail} 
-        <Clipboard props = {item.detail} />
-        {copied?<div >Copied </div>:<div className=''>no</div>}
+        <button onClick={()=>setCopied(true)}><Clipboard props = {item.detail} /></button>
       </div> 
       
       ));
@@ -44,7 +45,9 @@ export default function SocialLinks(icons:any) {
          </button>
   
          { active ?
-           (<div className='absolute   mt-[1rem] ml-[-80vw] w-[80vw] place-items-center w-[2rem] '>{iconDetail}</div>) : (
+           (<div className='absolute   mt-[1rem] ml-[-80vw] w-[80vw] place-items-center w-[2rem] text-[1rem]'>{iconDetail} 
+           {copied?<div className=' font-serif font-bold bg-[#1a1b1c]' >Copied </div>:<div className='hidden'>no</div>}
+           </div>) : (
              <></>
             )
          }

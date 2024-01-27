@@ -13,7 +13,7 @@ function clipboard(prop:any) {
        };  
   return (
     <>
-        <button onClick = {()=>copyToClipboard(dataToCopy)} className='text-white' >
+        <button onClick = {()=>copyToClipboard(dataToCopy)} className='text-white text-[0.8rem]' >
            <IoMdCopy /> 
         </button>
     </>
