@@ -24,9 +24,9 @@ return (
   <>
     < section className="antialiased bg-neutral-800/20  absolute px-[1rem] shadow- [0_35px_60px_-15px_rgba(0,0,0,0.3)] font-serif rounded m-[20px] h-[90vh]  w-[90vw] max-sm:p-[0.4rem]  max-sm:m-auto max-sm:relative max-sm:px-[1rem] max-sm:w-[95vw] max-sm:m-[1rem]  " >
            <Header  />
-          <div className='border flex m-auto items-center justify-center  h-[90%] max-md:h-[80%]  ' >
+          <div className=' flex m-auto items-center justify-center  h-[90%] max-md:h-[80%]  ' >
             <div className=' space-y-[3rem]  max-lg:m-auto max-sm: p-[0.3rem] max-xl:space-y-[1rem] '>
-              <div className='   flex border items-center  max-lg:block max-sm:block '>
+              <div className='   flex  items-center  max-lg:block max-sm:block '>
                 <div className='  m-auto flex items-center space-x-[5rem] max-lg:space-x-[2rem] '>
                   <div className='text-white  '>
                     <p className='text-[2.5rem] max-lg:text-[1rem] max-sm:text-[0.8rem]  '>🙋‍♂️Hey Hi...👋</p>
