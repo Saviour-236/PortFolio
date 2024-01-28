@@ -9,28 +9,30 @@ import { BsCopy } from "react-icons/bs";
     
 export default function SocialLinks(icons:any) {
   const [data,setData]=useState(icons)
-  const a = icons.icons.map((item:any) => (
-    <button className='flex space-x-[0.5rem]' onClick={()=>copyData(item.detail)}>
-      {item.icon}
-      <Clipboard data = {item.detail}/>
-    </button>
-  ))
   const [copied,setCopied] = useState(false) //for pop up when text copied
-  const [active,setactive] =useState(false)//for dropmenu to perfrom onclick event
+  const [active,setactive] =useState(false)//for dropmenu icon to perfrom onclick event
+  const [hover,setHover]=useState(false);
   const [icons1,seticons] = useState([
     {icon:<CiMobile3 />,detail:'+91 6230930041',id:1,copyicon:<BsCopy />},
     {icon:<IoMailOpenOutline />,detail:'thakursureshkumar118@gmail.com',id:2,             copyicon:<BsCopy />} ,
     {icon:<CiLocationOn />,detail:'vill Kareu, Po Ohra, Teh Bhalai,Distt Chamba,HP',id:3,copyicon:<BsCopy />}]);// icons compoent and detail
+    const d = icons.icons.map((item:any) => (<div className='flex space-x-[1rem]'>
+            <button className='flex space-x-[0.5rem] text-[2rem]' onMouseEnter={()=>setHover(true)} onMouseLeave={()=> setHover(false) }>
+               {item.icon}
+            </button>
+    <Clipboard data = {item.detail}/>
+   
+    </div>
+    ))
     const dropMenu = ( ) => {
     const handleClick =() =>{
       setactive(!active);
       
     } //changing the active state according to click
-    
     const iconDetail = icons1.map((item:any) => (
       <div key={item.id} className='flex  items-center text-[0.8rem] space-x-[6rem] rounded bg-[#1a1b1c] p-[0.5rem] font-bold' >
         {item.detail} 
-        <button onClick={()=>setCopied(true)}><Clipboard props = {item.detail} /></button>
+        <Clipboard props = {item.detail} />
       </div> 
       
       ));
@@ -55,23 +57,10 @@ export default function SocialLinks(icons:any) {
       </>
     )
   } // control of full drop menu 
-  const b = setTimeout(() => {
-    setCopied(false);
-  }, 1000);
-  const copyData = async (data:any) => {
-      try {
-       await navigator.clipboard.writeText(data);
-       setCopied(true)
-       {b}
-      } catch (err) {
-       console.error('Unable to copy text to clipboard');
-      }
-     };
   return (
     <>
-    <div className='text-white items-center mr-[1rem]  space-x-[1rem] flex max-md:hidden ' >
-    {copied?<div >Copied </div>:<div className='hidden'>no</div>}
-     {a}
+    <div className='text-white  mr-[1rem]  space-x-[1rem] flex max-md:hidden ' >
+     {d}
     </div>
       <div className='hidden relative max-md:flex'>
        {dropMenu()}

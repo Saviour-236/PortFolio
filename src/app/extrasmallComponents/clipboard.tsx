@@ -3,21 +3,25 @@ import React, { useState } from 'react'
 import { IoMdCopy } from "react-icons/io";
 function clipboard(prop:any) {
     const [dataToCopy,setDataToCopy] = useState(Object.values(prop))
-    const copyToClipboard = async ( arg:any ) => {
+    const [buttonClass,setButtonClass]= useState('text-white text-[0.8rem] ')
+    const [copied,setCopied]=useState(false)
+    const handleClick = async ( arg:any ) => {
         try {
          await navigator.clipboard.writeText(arg);
-         console.log('done',arg)
+         setCopied(true)
+         setTimeout(()=>setCopied(false),200)
         } catch (err) {
          console.error('Unable to copy text to clipboard', err);
         }
-       };  
+       };//it will copy data 
   return (
     <>
-        <button onClick = {()=>copyToClipboard(dataToCopy)} className='text-white text-[0.8rem]' >
-           <IoMdCopy /> 
-        </button>
+    <button onClick = {()=>handleClick(dataToCopy)} className={buttonClass} >
+    {copied?<p>copied</p>:<IoMdCopy />} 
+    </button>
+        
     </>
-  )
+  )//returning button which is  a copy icon
 }
 
 export default clipboard

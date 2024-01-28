@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body  className="font-serif antialiased bg-[url('https://images.pexels.com/photos/18495/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')]   bg-cover bg-center bg-fixed  bg-no-repeat   
-     md:justify-center flex   relative  max-sm:flex max-sm:items-center max-sm:pt-[3rem] ">
+     md:justify-center flex max-sm:flex max-sm:items-center  ">
         {children}</body>
     </html>
   )
