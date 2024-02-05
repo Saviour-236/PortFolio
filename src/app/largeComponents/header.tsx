@@ -5,10 +5,13 @@ import { CiMobile3 } from "react-icons/ci"
 import { IoMailOpenOutline } from "react-icons/io5"
 import { CiLocationOn } from "react-icons/ci"
 import { MdOutlineCloudDownload } from "react-icons/md"
-import { MdOutlineContacts } from "react-icons/md"
-import { IoMdCopy } from "react-icons/io";
-import { BsCopy } from "react-icons/bs";
+import { FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { FiGithub } from "react-icons/fi";
+import { LuLinkedin } from "react-icons/lu";
+import Link from "next/link"
 function Header() {
+    const [socialIcons,setSocialicons]=useState([{icon:<FaInstagram />,link:'https://www.instagram.com/saviour_11235?igsh=MXNudXFwbXY2NG92bw==' },{icon:<LuLinkedin />,link:'https://www.linkedin.com/in/suresh-kumar-thakur-8b74bb263/'},{icon:<FiGithub />,link:'https://github.com/Saviour-236'},{icon:<FaXTwitter />,link:'https://twitter.com/X7Saviour' }])
     const [icons,seticons] = useState ([
     {icon:<CiMobile3 />,detail:'+91 6230930041'},
     {icon:<IoMailOpenOutline />,detail:'thakursureshkumar118@gmail.com',            } ,
@@ -26,8 +29,13 @@ function Header() {
             </p>
             <p className='lg:hidden'>PortFolio</p>
             </div>
-            <div>
+            <div className='hidden '>
             <SocialLinks icons={icons} />
+            </div>
+            <div className='text-white flex space-x-[1rem]'>
+              {socialIcons.map(x =>(
+                <Link href={x.link}>{x.icon}</Link>
+              ))}
             </div>
        </div>
     </>
