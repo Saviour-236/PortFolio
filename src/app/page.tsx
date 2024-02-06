@@ -27,17 +27,6 @@ return (
                   </div>
                 </div>
               </div>
-              <div className='lg:hidden text-white '>
-                <div className=' flex  justify-center space-x-[0.5rem] '>
-                  <Link href='Projects'><button className={buttonCss}>Project<CiCircleChevDown /></button></Link>
-                  <button className={buttonCss}>Skills<CiCircleChevDown /></button>
-                 <button className={buttonCss}>Experience<CiCircleChevDown /></button>
-                </div>
-                 <div className=' flex justify-center space-x-[0.5rem]  '>
-                 <button className={buttonCss}>Resume<CiCircleChevDown /></button>
-                 <button className={buttonCss}>Contacts<CiCircleChevDown /></button>
-                </div>
-              </div>
             </div>
           </div>
    </section>
