@@ -16,11 +16,11 @@ export default function SocialLinks(icons:any) {
     {icon:<CiMobile3 />,detail:'+91 6230930041',id:1,copyicon:<BsCopy />},
     {icon:<IoMailOpenOutline />,detail:'thakursureshkumar118@gmail.com',id:2,             copyicon:<BsCopy />} ,
     {icon:<CiLocationOn />,detail:'vill Kareu, Po Ohra, Teh Bhalai,Distt Chamba,HP',id:3,copyicon:<BsCopy />}]);// icons compoent and detail
-    const d = icons.icons.map((item:any) => (<div className='flex space-x-[1rem]'>
-            <button className='flex space-x-[0.5rem] text-[2rem]' onMouseEnter={()=>setHover(true)} onMouseLeave={()=> setHover(false) }>
+    const d = icons.icons.map((item:any,index:any) => (<div className='flex space-x-[1rem]' key={index}>
+            <button  className='flex space-x-[0.5rem] text-[2rem]' onMouseEnter={()=>setHover(true)} onMouseLeave={()=> setHover(false) }>
                {item.icon}
             </button>
-    <Clipboard data = {item.detail}/>
+            <Clipboard data = {item.detail} />
    
     </div>
     ))
@@ -47,7 +47,7 @@ export default function SocialLinks(icons:any) {
          </button>
   
          { active ?
-           (<div className='absolute w-fit  mt-[1rem] ml-[-80vw] w-[80vw] place-items-center w-[2rem] text-[1rem]'>{iconDetail} 
+           (<div className='absolute  mt-[1rem] ml-[-80vw] w-[80vw] place-items-center  text-[1rem]'>{iconDetail} 
            {copied?<div className=' font-serif font-bold bg-[#1a1b1c]' >Copied </div>:<div className='hidden'>no</div>}
            </div>) : (
              <></>

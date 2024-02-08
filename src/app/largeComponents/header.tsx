@@ -52,8 +52,8 @@ function Header() {
             <SocialLinks icons={icons} />
             </div>
             <div className='text-white flex space-x-[1rem]'>
-              {socialIcons.map(x =>(
-                <Link href={x.link}>{x.icon}</Link>
+              {socialIcons.map((x,index)=>(
+                <Link href={x.link} key={index}>{x.icon}</Link>
               ))}
             </div>
        </div></Suspense>
