@@ -1,21 +1,94 @@
 'use client'
 import React, { useState, Suspense } from 'react'
+import Image from 'next/image'
 import loading from './loading'
 function Skills() {
   const [skills,setSills] = useState([
-    {imgSrc:'/next.png',name:'Next.Js',disc:'',divCss:'relative  text-white',imgCss:'h-[5rem] bg-white rounded-full p-[0.2rem]',imgDivCss:' bg-white rounded rounded-full'},
-    {imgSrc:'/React.png',name:'React.Js',disc:'',divCss:'relative',imgCss:'h-[5rem] w-[5rem]     rounded-full p-[0.2rem]  bg-black',imgDivCss:' bg-white p-[0.2rem] rounded-full'},
-    {imgSrc:'/typescript.png',name:'TypeScript',disc:'',divCss:'relative',imgCss:'h-[5rem] w-[5rem]  rounded-full p-[0.2rem] bg-black',imgDivCss:'bg-white p-[0.2rem] rounded-full'},
-    {imgSrc:'javascript.png',name:'JavaScript',disc:'',divCss:'relative',imgCss:'h-[5rem] w-[5rem]  rounded-full p-[0.2rem] bg-black',imgDivCss:'bg-white p-[0.2rem] rounded-full'},
-    {imgSrc:'/tailwind.png',name:'TailwindCss',disc:'',divCss:'relative',imgCss:'h-[4rem] w-[6rem] ',imgDivCss:' p-[0.2rem] rounded-full'},
-    {imgSrc:'/node.png',name:'Node.JS',disc:'',divCss:'relative',imgCss:'h-[5rem] w-[6rem]  rounded-full  bg-black',imgDivCss:'bg-white p-[0.2rem] rounded-full'},
-    {imgSrc:'/express.png',name:'Express.Js',disc:'',divCss:'relative',imgCss:'h-[5rem] w-[5rem]  rounded-full p-[0.1rem] bg-white',imgDivCss:'bg-white p-[0.2rem] rounded-full'},
-    {imgSrc:'/mongodb.png',name:'MongoDb',disc:'',divCss:'relative',imgCss:'h-[5rem] w-[5rem]  rounded-full p-[0.2rem] bg-black',imgDivCss:'bg-white p-[0.2rem] rounded-full'},
-    {imgSrc:'/C++.png',name:'C++',disc:'',divCss:'relative',imgCss:'  h-[6rem] w-[5rem]',imgDivCss:''},
-    {imgSrc:'python.png',name:'Python',disc:'',divCss:'relative',imgCss:'h-[5rem] w-[5rem]  rounded-full p-[0.2rem] bg-black',imgDivCss:'bg-white p-[0.2rem] rounded-full'},
-    {imgSrc:'wordpress.png',name:'WordPress',disc:'',divCss:'relative',imgCss:'h-[5rem] w-[5rem]  rounded-full p-[0.2rem] bg-black',imgDivCss:'bg-white p-[0.2rem] rounded-full'},
-    {imgSrc:'git.png',name:'git',disc:'',divCss:'relative',imgCss:'h-[5rem] w-[5rem]  rounded-full p-[0.2rem] bg-black',imgDivCss:'bg-white p-[0.2rem] rounded-full'},
-    {imgSrc:'github.png',name:'github',disc:'',divCss:'relative',imgCss:'h-[5rem] w-[5rem]  rounded-full p-[0.2rem] bg-white',imgDivCss:'bg-black p-[0.2rem] rounded-full'}
+    {img:<Image
+      src="/nextjs.png"
+      alt="project pictur"
+      width={90}
+      height={90}
+    />,name:'Next.Js',disc:'',divCss:'relative  text-white',imgDivCss:' bg-white rounded rounded-full'},
+    {img:<Image
+      src="/React.png"
+      alt="project pictur"
+      width={100}
+      height={100}
+    />,name:'React Js',disc:'',divCss:'relative  text-white',imgDivCss:'  rounded-full'},
+    {img:<Image
+      src="/typescript.png"
+      alt="project pictur"
+      width={100}
+      height={100}
+    />,name:'TypeScript',disc:'',divCss:'relative  text-white',imgDivCss:'  rounded rounded-full'},
+    {img:<Image
+      src="/javascript.png"
+      alt="project pictur"
+      width={90}
+      height={90}
+    />,name:'JavaScript',disc:'',divCss:'relative  text-white',imgDivCss:' rounded rounded-full'},
+    {img:<Image
+      src="/node.png"
+      alt="project pictur"
+      width={90}
+      height={90}
+    />,name:'Node Js',disc:'',divCss:'relative  text-white',imgDivCss:'  rounded rounded-full'},
+    {img:<Image
+      src="/tailwind.png"
+      alt="project pictur"
+      width={90}
+      height={90}
+    />,name:'TailWind Css',disc:'',divCss:'relative  text-white',imgDivCss:'  rounded rounded-full'},
+    {img:<Image
+      src="/express.png"
+      alt="project pictur"
+      width={90}
+      height={90}
+    />,name:'Express Js',disc:'',divCss:'relative  text-white',imgDivCss:' rounded rounded-full'},
+    {img:<Image
+      src="/mongodb.png"
+      alt="project pictur"
+      width={90}
+      height={90}
+    />,name:'MongoDb',disc:'',divCss:'relative  text-white',imgDivCss:'  rounded rounded-full'},
+    {img:<Image
+      src="/wordpress.png"
+      alt="project pictur"
+      width={90}
+      height={90}
+    />,name:'WordPress',disc:'',divCss:'relative  text-white',imgDivCss:'  rounded rounded-full'},
+    {img:<Image
+      src="/git.png"
+      alt="project pictur"
+      width={90}
+      height={90}
+    />,name:'Git',disc:'',divCss:'relative  text-white',imgDivCss:' rounded rounded-full'},
+    {img:<Image
+      src="/github.png"
+      alt="project pictur"
+      width={90}
+      height={90}
+    />,name:'GitHub',disc:'',divCss:'relative  text-white',imgDivCss:'bg-white  pb-[2px]  rounded-full'},
+    {img:<Image
+      src="/ubuntu.png"
+      alt="project pictur"
+      width={90}
+      height={90}
+    />,name:'Ubuntu',disc:'',divCss:'relative  text-white',imgDivCss:'  pb-[2px]  rounded-full'},
+    {img:<Image
+      src="/C++.png"
+      alt="project pictur"
+      width={90}
+      height={90}
+    />,name:'C++',disc:'',divCss:'relative  text-white',imgDivCss:'  rounded rounded-full'},
+    {img:<Image
+      src="/python.png"
+      alt="project pictur"
+      width={90}
+      height={90}
+    />,name:'Python',disc:'',divCss:'relative  text-white',imgDivCss:'  rounded rounded-full'},
+
   ])
   function Loading(){
     return(
@@ -24,10 +97,10 @@ function Skills() {
   }
   return (
   <>
-    <div className='grid grid-cols-4  max-lg:grid-cols-3  text-white place-items-center m-[1rem] rounded bg-black-800/200 text-center bg-slate z-[] h-full max-lg:mb-[5rem] max-md:grid-cols-2 gap-4'> 
+    <div className='grid grid-cols-4  max-lg:grid-cols-3  text-white place-items-center mb-[5rem] rounded bg-black-800/200 text-center bg-slate z-[] h-full max-lg:mb-[5rem] max-md:grid-cols-2 gap-4'> 
     {skills.map((x,index) =>(<Suspense fallback={<Loading/> } >
       <div key ={index} className={x.divCss} >
-        <div className={x.imgDivCss} >< img src={x.imgSrc} className={x.imgCss}/></div>
+        <div className={x.imgDivCss} >{x.img}</div>
         {x.name}
         {x.disc}
       </div></Suspense>

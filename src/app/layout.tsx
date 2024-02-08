@@ -14,18 +14,18 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-  children,
+  children
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en"><Suspense fallback={<div className='bg-black p-[100%]'></div>}>
+    <html lang="en">
       <body  className="font-serif antialiased bg-[url('https://images.pexels.com/photos/18495/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')]  bg-cover bg-center bg-fixed  bg-no-repeat p-[1%] pt-[0rem]">
         <Header  />
         <Link href='.' ><FaHome className='text-white border text-[1.5rem] mt-[1rem] rounded absolute bg-[#86a3d1] h-fit '/></Link>
         {children}
         <Footer />
-      </body></Suspense>
+      </body>
     </html>
   )
 }
