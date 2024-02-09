@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d out ",
+    "deploy": "next build && firebase deploy",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
