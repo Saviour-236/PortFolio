@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "next build && firebase deploy",
+    "deploy": "next build  && firebase deploy",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
