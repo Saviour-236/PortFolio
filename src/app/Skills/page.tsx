@@ -103,7 +103,7 @@ function Skills() {
         <div className={x.imgDivCss} >{x.img}</div>
         {x.name}
         {x.disc}
-      </div></Suspense>
+      </div>ssdfds</Suspense>
      ))}
    </div>
   </>
