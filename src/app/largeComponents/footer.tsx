@@ -12,7 +12,7 @@ function footer() {
     
   return (
     <>
-    <div className='fixed bottom-[1.5rem] animate-pulse text-white text-[1rem]  flex justify-center w-[98vw] max-md:overflow-scroll z-[1] max-md:bottom-[0rem] max-md:pl-[20rem] max-md:pt-[-3rem] max-md:bg-black '>
+    <div className='fixed bottom-[1.5rem] animate-pulse text-white text-[1rem]  flex justify-center w-[98vw] max-md:overflow-scroll z-[1] max-md:bottom-[0rem] max-md:pl-[20rem] max-md:pt-[-3rem '>
     {buttons.map((x,index)=>(
      <Link href={x.link} key={index}>
        <button className={x.cls } >

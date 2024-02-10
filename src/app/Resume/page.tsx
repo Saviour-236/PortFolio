@@ -6,7 +6,7 @@ function Resume() {
     const handleDownload = () => {
       // Create a link element
       const link = document.createElement('a');
-      link.href = '/resume.pdf';
+      link.href = '/';
       link.download = 'resume'; // Set the filename for the downloaded file
       document.body.appendChild(link);
       link.click();
@@ -14,15 +14,21 @@ function Resume() {
     };
   
     return (
-      <button onClick={handleDownload} className='text-white'>Download Image</button>
+      <button onClick={handleDownload} className='text-white'><Image
+      src="/downloading.png"
+      alt="Download button"
+      width={25}
+      height={25}
+     /></button>
     );
   };
   return (
-    <section className='pb-[5rem] items-center'><div className='text-white'>Resume 
-    <DownloadButton/>
+    <section className='pb-[5rem] items-center'>
+      <div className='text-white'>
+    <div className='text-right'><DownloadButton/></div>
     <div><Image
-           src="/resume.jpg"
-           alt="project picture"
+           src=""
+           alt="Resume"
            width={1000}
            height={1000}
           /></div>

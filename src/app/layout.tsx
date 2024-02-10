@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body  className="font-serif antialiased bg-[url('https://img.freepik.com/premium-photo/black-feathers-background_955834-1773.jpg')]  bg-cover bg-center bg-fixed  bg-no-repeat p-[1%] pt-[0rem]">
+      <body  className="font-serif antialiased bg-[url('https://img.freepik.com/premium-photo/black-feathers-background_955834-1773.jpg')] max-md:bg-[url('https://w0.peakpx.com/wallpaper/639/3/HD-wallpaper-dark-lines-black-dark-super-background-lines-navy-blue-thumbnail.jpg')]  bg-cover bg-center bg-fixed  bg-no-repeat p-[1%] pt-[0rem] space-y-[2rem]">
         <Header  />
         <Link href='.' ><FaHome className='text-white border text-[1.5rem] mt-[1rem] rounded absolute bg-[#86a3d1] h-fit '/></Link>
         {children}
