@@ -11,6 +11,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FiGithub } from "react-icons/fi";
 import { LuLinkedin } from "react-icons/lu";
 import { Suspense } from 'react'
+import Image from 'next/image'
 function Loading(params:any) {
   return <>
   
@@ -35,13 +36,19 @@ function Header() {
     {icon:<IoMailOpenOutline />,detail:'thakursureshkumar118@gmail.com',            } ,
     {icon:<CiLocationOn />,detail:'vill Kareu, Po Ohra, Teh Bhalai,Distt Chamba,HP'},
     {icon:<MdOutlineCloudDownload />,detail:'sf' }])
+    const a = '/img.JPG'
   return (
     <>
       <Suspense fallback={<Loading/>}>
        <div className=" item-center   flex place-content-between border-b border-slate-700 h-fit-content items-center w-[100%] text-[1.3rem] font-serif">
             <div className=' flex items-center m-[1rem] mt-[1rem]  max-lg:m-[0rem]  text-white   space-x-[3rem] max-lg:space-x-[1rem] font-bold '>
-              <button>
-                <img src='https://img.freepik.com/premium-photo/minimalist-feather-design_802059-3.jpg?size=626&ext=jpg&uid=R122479474&ga=GA1.1.1034689284.1705596486&semt=ais ' className='rounded-full h-[3rem] w-[3rem]'/>
+              <button className='rounded-full h-[4rem] w-[4rem] border items-center overflow-hidden'>
+                <Image
+                  src={a}
+                  alt="project pictur"
+                  width={50}
+                  height={50}
+                  />
               </button>
               <p className='max-lg:hidden'>
               Welcome To My PortFolio
