@@ -4,8 +4,10 @@ import Image from 'next/image'
 import Link from 'next/link';
 import { FaChevronDown } from "react-icons/fa";
 import { IoIosArrowUp } from "react-icons/io";
+import { FaArrowCircleRight } from "react-icons/fa";
+import { FaRegArrowAltCircleRight } from "react-icons/fa";
 function Abc () {
-const [divCssBefore,setDivCssbefore] = useState('bg-white bg-opacity-[0.5] h-[4rem] w-[25rem] overflow-auto rounded text-black p-[0.5rem] mb-[10rem]')
+const [divCssBefore,setDivCssbefore] = useState('bg-white bg-opacity-[0.5] h-[0rem] overflow-auto rounded text-black p-[0.5rem] mb-[10rem]')
  const [divCssAfter,setDivCssAfter] = useState('bg-white bg-opacity-[0.5] h-fit overflow-auto rounded text-black p-[0.5rem]')
   const [active,setActive]= useState(false)
      const handleClick=()=>{
@@ -35,27 +37,23 @@ const [divCssBefore,setDivCssbefore] = useState('bg-white bg-opacity-[0.5] h-[4r
   Codebase is maintained on GitHub repositories.
   Continuous deployment is set up using Netlify, allowing automatic deployment of changes pushed to the main branch.
   <br />
-  <Link href='https://myportfoliobuiltwithreactnextjs.netlify.app/'><button className='rounded bg-white '>Click To Visit </button></Link>
   </div>
   <div className='text-right'><button onClick={handleClick}> {active ? <IoIosArrowUp /> : <FaChevronDown />} </button></div>
   </>)
 }
 function portfolio() {
+  const [icon,setIcon]=useState(Boolean)
   return (
     <>
     <section className='p-[1rem]'>
       <div className='text-white  border-b-[1px] pb-[1rem] border-gray-50 space-y-[0.5rem]'>
-      <div><Image
-        src="/React.png"
+      <div className='mb-[0.5rem] items-center '><Image
+        src="/portfolio.png"
         alt="project picture"
         width={100}
         height={100}
        /></div>
-      <div>
-         Portfolio 
-      </div>
-      <Abc/>
-      <Link href='https://myportfoliobuiltwithreactnextjs.netlify.app/'><button className='rounded bg-white text-black p-[0.3rem]'>Click To Visit </button></Link>
+      <Link href='https://myportfoliobuiltwithreactnextjs.netlify.app/'><button onMouseEnter={()=>setIcon(true)} onMouseLeave={()=>setIcon(false)} className='p-[0.5]rounded bg-black shadow shadow-blue-500/40 align-middle items-center rounded-md text-white p-[0.5rem] flex space-x-[1rem]'><p>Portfolio</p> {icon?<FaRegArrowAltCircleRight />:<FaArrowCircleRight />}</button></Link>
      </div>
   </section>
     </>

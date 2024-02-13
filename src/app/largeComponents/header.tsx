@@ -36,19 +36,25 @@ function Header() {
     {icon:<IoMailOpenOutline />,detail:'thakursureshkumar118@gmail.com',            } ,
     {icon:<CiLocationOn />,detail:'vill Kareu, Po Ohra, Teh Bhalai,Distt Chamba,HP'},
     {icon:<MdOutlineCloudDownload />,detail:'sf' }])
-    const a = '/img.JPG'
+    const a = '/hanumanji.webp'
+    const [logoClicked,setlogoClicked]=useState(false)
   return (
     <>
       <Suspense fallback={<Loading/>}>
        <div className=" item-center   flex place-content-between border-b border-slate-700 h-fit-content items-center w-[100%] text-[1.3rem] font-serif">
             <div className=' flex items-center m-[1rem] mt-[1rem]  max-lg:m-[0rem]  text-white   space-x-[3rem] max-lg:space-x-[1rem] font-bold '>
-              <button className='rounded-full h-[4rem] w-[4rem] border items-center overflow-hidden'>
-                <Image
+              <button onClick={()=>setlogoClicked(!logoClicked)} className='rounded-full  border items-center overflow-hidden '>
+                {logoClicked ?<div className='absolute top-[0] left-[0] items-center flex  z-[100] bg-gray-500/30 w-full h-full'><Image
                   src={a}
-                  alt="project pictur"
+                  alt="Profiel Pic"
+                  width={570}
+                  height={570}
+                  /></div>:<Image
+                  src={a}
+                  alt="Profiel Pic"
                   width={50}
                   height={50}
-                  />
+                  />}
               </button>
               <p className='max-lg:hidden'>
               Welcome To My PortFolio
