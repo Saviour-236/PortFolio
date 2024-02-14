@@ -24,6 +24,13 @@ function Resume() {
   };
   return (
     <section className='pb-[5rem] items-center'>
+      <div className='items-center flex text-center justify-content-center text-[1rem]'>
+       <div className='m-auto '><Image
+        src='/resume.png'
+        alt='resume Logo'
+        height={75}
+        width={75}/></div> 
+      </div>
       <div className='text-white'>
     <div className='text-right'><DownloadButton/></div>
     <div><Image

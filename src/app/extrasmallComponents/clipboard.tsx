@@ -1,23 +1,16 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState ,useEffect} from 'react'
 import { IoMdCopy } from "react-icons/io";
 function clipboard(prop:any) {
-  const jsonString = JSON.stringify(prop);
-  console.log(typeof prop)
-  const [dataToCopy,setDataToCopy] = useState<any>()
+  const [dataToCopy,setDataToCopy] = useState<any>( Object.values(prop) )
   const [buttonClass,setButtonClass]= useState('text-white text-[0.8rem] ')
   const [copied,setCopied]=useState(false)
-  const handleClick = async ( arg:any ) => {
-    if (arg==Object){
-      setDataToCopy(Object.values(arg))
-    }
-    else{
-      setDataToCopy(arg)
-      console.log(typeof arg)
-    }
+  const handleClick = async ( arg:any )=>
+  {
     try {
       await navigator.clipboard.writeText(arg);
       setCopied(true);
+      console.log(arg)
       setTimeout(()=>setCopied(false),200);
       } catch (err) {
        console.error('Unable to copy text to clipboard', err);
