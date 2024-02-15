@@ -3,6 +3,7 @@ const nextConfig = {
     images: {
         domains: ['img.freepik.com',],
       },
+      output: 'export',
       
 }
 
