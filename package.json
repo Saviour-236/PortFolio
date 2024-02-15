@@ -3,11 +3,12 @@
   "private": true,
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "next build -d out  && firebase deploy",
+    "deploy": "next build && firebase deploy",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export"
   },
   "dependencies": {
     "git": "^0.1.5",
@@ -16,6 +17,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
     "react-loading-skeleton": "^3.4.0",
+    "sharp": "^0.33.2",
     "tailwind": "^4.0.0"
   },
   "devDependencies": {
