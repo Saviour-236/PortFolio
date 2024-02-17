@@ -63,7 +63,7 @@ function portfolio() {
         width={100}
         height={100}
        /></div>
-      <Link href='https://myportfoliobuiltwithreactnextjs.netlify.app/'><button onMouseEnter={()=>setIcon(true)} onMouseLeave={()=>setIcon(false)} className='p-[0.5]rounded bg-black shadow shadow-blue-500/40 align-middle items-center rounded-md text-white p-[0.5rem] flex space-x-[1rem]'><p>Portfolio</p> {icon?<FaRegArrowAltCircleRight />:<FaArrowCircleRight />}</button></Link>
+      <Link href='https://portfolio-839e3.web.app/'><button onMouseEnter={()=>setIcon(true)} onMouseLeave={()=>setIcon(false)} className='p-[0.5]rounded bg-black shadow shadow-blue-500/40 align-middle items-center rounded-md text-white p-[0.5rem] flex space-x-[1rem]'><p>Portfolio</p> {icon?<FaRegArrowAltCircleRight />:<FaArrowCircleRight />}</button></Link>
      </div>
   </section></Suspense>
     </>
