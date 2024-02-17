@@ -14,7 +14,7 @@ function Experience() {
       <div className='fullDiv p-[1rem] border-b-[1px] space-y-1 text-white'>
         <div className='logodiv rounded-full items-center'>
           <Image
-           src="/phfLogo"
+           src="/phfLogo.png"
            alt="project picture"
            width={50}
            height={50}
