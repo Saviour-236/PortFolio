@@ -30,8 +30,11 @@ export default function Home() {
   const [a,seta] = useState(4)
 return (
   <><Suspense fallback={<Loading/>}>
-    < section className="antialiased bg-neutral-800/20   px-[1rem] shadow- [0_35px_60px_-15px_rgba(0,0,0,0.3)] font-serif rounded m-[20px] h-[65vh]  w-[90vw] ml-[3rem] mt-[2rem] max-xl:ml-[2rem] max-xl:mt-[10rem] max-sm:p-[0.4rem]  max-sm:m-auto max-sm:relative max-sm:px-[1rem] max-sm:w-[95vw]  ] " >
-          <div className=' flex m-auto items-center justify-center  h-[90%] max-md:h-[80%]  ' >
+    < section className="antialiased bg-neutral-800/20   px-[1rem] shadow- [0_35px_60px_-15px_rgba(0,0,0,0.3)] font-serif rounded m-[20px] h-[65vh]  w-[90vw] ml-[3rem] mt-[2rem] max-xl:ml-[2rem] max-xl:mt-[10rem] max-sm:p-[0.4rem]  max-sm:m-auto max-sm:relative max-sm:px-[1rem] max-sm:w-[95vw]  ] space-y-[3rem]" >
+                 <div className=' relative flex lg:hidden  h-[15rem]  w-[15rem] m-auto  rounded-full shadow-lg shadow-[#f2f0eb]  items-center align-middle overflow-hidden '  >
+                    <img src='/myImg.jpeg' className='opacity-[0.6]'/>
+                  </div>
+          <div className=' flex m-auto items-center justify-center  h-fit  ' >
             <div className=' space-y-[3rem]  max-lg:m-auto max-sm: p-[0.3rem] max-xl:space-y-[1rem] '>
               <div className='   flex  items-center  max-lg:block max-sm:block '>
                 <div className='  m-auto flex items-center space-x-[5rem] max-lg:space-x-[2rem] '>
@@ -41,8 +44,8 @@ return (
                     <p className="text-[1.5rem]  text-[#c7d6d4]  font-bold max-lg:text-[1.5rem] max-sm:text-[1rem] ">Your Next Web Development Asset</p>
                     <p className='text-[1.5rem] italic max-lg:text-[1.5rem] max-sm:text-[1rem]'>Let's connect and explore how my skills can contribute to your team's success.</p>
                   </div>
-                  <div className=' relative flex  m-auto    items-center align-middle  max-md:hidden   '  >
-                    <img src='https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010130.jpg?size=626&ext=jpg&uid=R122479474&ga=GA1.1.1034689284.1705596486&semt=ais' className='opacity-[0.6] h-[15rem] max-lg:h[15rem] w-[20rem]  rounded '/>
+                  <div className=' relative flex max-lg:hidden  h-[15rem]  w-[15rem] m-auto  rounded-full shadow-lg shadow-[#f2f0eb]  items-center align-middle overflow-hidden '  >
+                    <img src='/myImg.jpeg' className='opacity-[0.6]'/>
                   </div>
                 </div>
               </div>

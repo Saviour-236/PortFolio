@@ -6,8 +6,8 @@ function Resume() {
     const handleDownload = () => {
       // Create a link element
       const link = document.createElement('a');
-      link.href = '/';
-      link.download = 'resume'; // Set the filename for the downloaded file
+      link.href = '/resume.pdf';
+      link.download = 'Suresh-kumar-resume'; // Set the filename for the downloaded file
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link)
@@ -23,7 +23,7 @@ function Resume() {
     );
   };
   return (
-    <section className='pb-[5rem] items-center'>
+    <section className='pb-[5rem] items-center  '>
       <div className='items-center flex text-center justify-content-center text-[1rem]'>
        <div className='m-auto '><Image
         src='/resume.png'
@@ -33,8 +33,9 @@ function Resume() {
       </div>
       <div className='text-white'>
     <div className='text-right'><DownloadButton/></div>
-    <div><Image
-           src=""
+    <div className='mx-auto w-fit shadow-2xl shadow-[#dce7f7] rounded overflow-hidden'>
+      <Image
+           src="/resume.jpg"
            alt="Resume"
            width={1000}
            height={1000}

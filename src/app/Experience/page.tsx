@@ -12,12 +12,12 @@ function Experience() {
         width={75}/></div> 
       </div>
       <div className='fullDiv p-[1rem] border-b-[1px] space-y-1 text-white'>
-        <div className='logodiv'>
+        <div className='logodiv rounded-full items-center'>
           <Image
-           src="/React.png"
+           src="/phfLogo"
            alt="project picture"
-           width={30}
-           height={30}
+           width={50}
+           height={50}
           /></div>
         <div className='postnameDiv'>Wordpress Developer</div>
         <div className='companyNameDiv'>PHF Leasing</div>
