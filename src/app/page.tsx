@@ -30,7 +30,7 @@ export default function Home() {
   const [a,seta] = useState(4)
 return (
   <><Suspense fallback={<Loading/>}>
-    < section className="antialiased bg-neutral-800/20   px-[1rem] shadow- [0_35px_60px_-15px_rgba(0,0,0,0.3)] font-serif rounded m-[20px] h-[65vh]  w-[90vw] ml-[3rem] mt-[2rem] max-xl:ml-[2rem] max-xl:mt-[10rem] max-sm:p-[0.4rem]  max-sm:m-auto max-sm:relative max-sm:px-[1rem] max-sm:w-[95vw]  ] space-y-[3rem]" >
+    < section className="antialiased bg-neutral-800/20   px-[1rem] shadow- [0_35px_60px_-15px_rgba(0,0,0,0.3)] font-serif rounded  h-fit  w-fit  mt-[2rem] max-sm:p-[0.4rem] border  max-sm:relative max-sm:px-[1rem]   ] space-y-[3rem] mb-[5rem] " >
                  <div className=' relative flex lg:hidden  h-[15rem]  w-[15rem] m-auto  rounded-full shadow-lg shadow-[#f2f0eb]  items-center align-middle overflow-hidden '  >
                     <img src='/myImg.jpeg' className='opacity-[0.6]'/>
                   </div>
@@ -41,8 +41,9 @@ return (
                   <div className='text-white  '>
                     <p className='text-[2.5rem] max-lg:text-[1rem] max-sm:text-[0.8rem]  '>🙋‍♂️Hey Hi...</p>
                     <p className='text-[3.5rem] text-[#ffd54a] max-lg:text-[2rem] max-sm:text-[1rem] '> M Suresh Kumar </ p>
-                    <p className="text-[1.5rem]  text-[#c7d6d4]  font-bold max-lg:text-[1.5rem] max-sm:text-[1rem] ">Your Next Web Development Asset</p>
-                    <p className='text-[1.5rem] italic max-lg:text-[1.5rem] max-sm:text-[1rem]'>Let's connect and explore how my skills can contribute to your team's success.</p>
+                    <p className="text-[1.5rem]  text-[#c7d6d4]  font-bold max-lg:text-[1.5rem] max-sm:text-[1rem] ">Visionary Web Developer</p>
+                    <p className='text-[1.5rem] italic max-lg:text-[1.5rem] max-sm:text-[1rem]'>Igniting digital experiences with passion and purpose. Committed to excellence, I thrive on challenges and collaborate seamlessly to drive projects forward. Eager to embrace new technologies, lead by example, and cultivate an environment of continuous learning and growth.
+                    </p>
                   </div>
                   <div className=' relative flex max-lg:hidden  h-[15rem]  w-[15rem] m-auto  rounded-full shadow-lg shadow-[#f2f0eb]  items-center align-middle overflow-hidden '  >
                     <img src='/myImg.jpeg' className='opacity-[0.6]'/>

@@ -57,7 +57,7 @@ function Header() {
                   />}
               </button>
               <p className='max-lg:hidden'>
-              Welcome To My PortFolio
+              Visionary Web Developer
               </p>
               <p className='lg:hidden'>PortFolio</p>
             </div>
