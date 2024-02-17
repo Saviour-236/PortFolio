@@ -59,7 +59,7 @@ function Header() {
               <p className='max-lg:hidden'>
               Visionary Web Developer
               </p>
-              <p className='lg:hidden'>PortFolio</p>
+              <p className='lg:hidden'></p>
             </div>
             <div className='hidden '>
             <SocialLinks icons={icons} />

@@ -30,7 +30,7 @@ export default function Home() {
   const [a,seta] = useState(4)
 return (
   <><Suspense fallback={<Loading/>}>
-    < section className="antialiased bg-neutral-800/20   px-[1rem] shadow- [0_35px_60px_-15px_rgba(0,0,0,0.3)] font-serif rounded  h-fit  w-fit  mt-[2rem] max-sm:p-[0.4rem] border  max-sm:relative max-sm:px-[1rem]   ] space-y-[3rem] mb-[5rem] " >
+    < section className=" bg-neutral-800/20 absolute top-[50%] translate-y-[-50%] m-auto shadow- [0_35px_60px_-15px_rgba(0,0,0,0.3)]  ]  font-serif rounded h-fit w-fit  space-y-3 p-[1rem]" >
                  <div className=' relative flex lg:hidden  h-[15rem]  w-[15rem] m-auto  rounded-full shadow-lg shadow-[#f2f0eb]  items-center align-middle overflow-hidden '  >
                     <img src='/myImg.jpeg' className='opacity-[0.6]'/>
                   </div>
@@ -39,20 +39,26 @@ return (
               <div className='   flex  items-center  max-lg:block max-sm:block '>
                 <div className='  m-auto flex items-center space-x-[5rem] max-lg:space-x-[2rem] '>
                   <div className='text-white  '>
-                    <p className='text-[2.5rem] max-lg:text-[1rem] max-sm:text-[0.8rem]  '>🙋‍♂️Hey Hi...</p>
-                    <p className='text-[3.5rem] text-[#ffd54a] max-lg:text-[2rem] max-sm:text-[1rem] '> M Suresh Kumar </ p>
+                    <div className='flex items-center'>
+                      <div>
+                        <p className='text-[2.5rem] max-lg:text-[1rem] max-sm:text-[0.8rem]  '>🙋‍♂️Hey Hi...</p>
+                        <p className='text-[3.5rem] text-[#ffd54a] max-lg:text-[2rem] max-sm:text-[1rem] '> M Suresh Kumar </ p>
+                      </div>
+                      <div className=' relative flex max-lg:hidden  h-[15rem]  w-[15rem] m-auto   rounded-full shadow-lg shadow-[#f2f0eb]  items-center align-middle overflow-hidden '  >
+                       <img src='/myImg.jpeg' className='opacity-[0.6]'/>
+                     </div>
+                    </div>
                     <p className="text-[1.5rem]  text-[#c7d6d4]  font-bold max-lg:text-[1.5rem] max-sm:text-[1rem] ">Visionary Web Developer</p>
+                    
                     <p className='text-[1.5rem] italic max-lg:text-[1.5rem] max-sm:text-[1rem]'>Igniting digital experiences with passion and purpose. Committed to excellence, I thrive on challenges and collaborate seamlessly to drive projects forward. Eager to embrace new technologies, lead by example, and cultivate an environment of continuous learning and growth.
                     </p>
-                  </div>
-                  <div className=' relative flex max-lg:hidden  h-[15rem]  w-[15rem] m-auto  rounded-full shadow-lg shadow-[#f2f0eb]  items-center align-middle overflow-hidden '  >
-                    <img src='/myImg.jpeg' className='opacity-[0.6]'/>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-   </section></Suspense>
+   </section>
+   </Suspense>
   </>
     
 )
