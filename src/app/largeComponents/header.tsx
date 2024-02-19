@@ -12,6 +12,7 @@ import { FiGithub } from "react-icons/fi";
 import { LuLinkedin } from "react-icons/lu";
 import { Suspense } from 'react'
 import Image from 'next/image'
+import { FaHome } from "react-icons/fa";
 function Loading(params:any) {
   return <>
   
@@ -64,6 +65,7 @@ function Header() {
             <div className='hidden '>
             <SocialLinks icons={icons} />
             </div>
+            <Link href='.' ><FaHome className='text-white border text-[1.5rem] rounded bg-[#86a3d1] h-fit z-[1]'/></Link>
             <div className='text-white flex space-x-[1rem]'>
               {socialIcons.map((x,index)=>(
                 <Link href={x.link} key={index}>{x.icon}</Link>
