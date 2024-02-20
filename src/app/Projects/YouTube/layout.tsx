@@ -5,8 +5,7 @@ export default function RootLayout({
     children: React.ReactNode,
   }) {
     return (
-        <main  className="h-full w-full border p-[1rem] bg-white text-black ">
-          <Header/>
+        <main  >
           {children}
         </main>
      

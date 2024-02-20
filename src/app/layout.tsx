@@ -20,12 +20,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" >
-      <body  className="font-serif  bg-[url('https://img.freepik.com/premium-photo/black-feathers-background_955834-1773.jpg')] max-md:bg-[url('https://w0.peakpx.com/wallpaper/639/3/HD-wallpaper-dark-lines-black-dark-super-background-lines-navy-blue-thumbnail.jpg')]  bg-cover bg-center bg-fixed  bg-no-repeat p-[1%] ] h-full w-full overflow-auto ">
-        <Header  />
-        
+      <body  className="font-serif  bg-[url('https://img.freepik.com/premium-photo/black-feathers-background_955834-1773.jpg')] max-md:bg-[url('https://w0.peakpx.com/wallpaper/639/3/HD-wallpaper-dark-lines-black-dark-super-background-lines-navy-blue-thumbnail.jpg')]  bg-cover bg-center bg-fixed  bg-no-repeat  ] h-full w-full overflow-scroll ">
+      <Header />
         {children}
-        <Footer />
       </body>
+      <Footer />
     </html>
   )
 }

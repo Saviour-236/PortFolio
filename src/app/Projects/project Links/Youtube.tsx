@@ -23,7 +23,7 @@ function Loading (){
           <div className='text-white  border-b-[1px] pb-[1rem] border-gray-50 space-y-[0.5rem]'>
           <div className='mb-[0.5rem] items-center '><Image
             src="/youtube.png"
-            alt="project picture"
+            alt="youtube picture"
             width={100}
             height={100}
            /></div>

@@ -11,10 +11,12 @@ function header() {
   return (
     <div className='text-black flex place-content-between h-fit'>
       <div className='text-black   border-[#000000] w-[25%] space-x-3 flex'>
-        <button className='text-[#000000] text-[1.5rem]'>
+        <button className='text-[#000000] text-[1.5rem] '>
          <IoMdMenu />
+        </button><button>
+         <img src='/youTubeAllImages/youtube.png ' className='h-[2.5rem] w-fit '/>
         </button>
-        <img src='/youTubeAllImages/youtube.png ' className='h-[2.5rem] w-fit '/>
+        
       </div>
       <div className=' text-[1.5rem] w-[50%] text-black flex items-center space-x-[1rem] justify-center'>
         <div className='items-center flex  w-[80%]  border rounded-full overflow-hidden place-content-around   h-[2.5rem] '>
@@ -27,13 +29,15 @@ function header() {
            <FaMicrophone /> 
         </button>
       </div>
-      <div className='w-[25%] border border-black  items-center justify-end space-x-5 text-[1.5rem] flex'>
+      <div className='w-[25%]  border-black  items-center justify-end space-x-5 text-[1.5rem] flex'>
         <button>
          <MdOutlineVideoCall />
         </button>
-        <button className='relative p-[0.3rem]'>
+        <button className='relative p-[0.3rem] flex items-center'>
          <LuBell />
-         <p className='absolute top-[0rem] right-[0] text-[1rem] rounded-full bg-red-600 text-white h-fit' > a+</p>
+         <p className=' absolute top-[-0.3rem] right-[0] text-[0.9rem] rounded-full bg-red-600 text-white h-fit p-[0rem] ' > 
+          a+
+         </p>
         </button>
         <button>
             {logo}

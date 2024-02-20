@@ -42,8 +42,8 @@ function Header() {
   return (
     <>
       <Suspense fallback={<Loading/>}>
-       <div className=" item-center   flex place-content-between border-b border-slate-700 h-fit-content items-center w-[100%] text-[1.3rem] font-serif">
-            <div className=' flex items-center m-[1rem] mt-[1rem]  max-lg:m-[0rem]  text-white   space-x-[3rem] max-lg:space-x-[1rem] font-bold '>
+       <div className=" item-center z-[1] sticky top-0 flex place-content-between border-b border-slate-700 h-fit-content items-center w-[100%] text-[1.3rem] font-serif">
+            <div className=' flex items-center mx-[1rem] m-[0.5rem]  max-lg:m-[0rem]  text-white   space-x-[3rem] max-lg:space-x-[1rem] font-bold '>
               <button onClick={()=>setlogoClicked(!logoClicked)} className='rounded-full  border items-center overflow-hidden '>
                 {logoClicked ?<div className='absolute top-[0] left-[0] items-center flex  z-[100] bg-gray-500/30 w-full h-full'><Image
                   src={a}
