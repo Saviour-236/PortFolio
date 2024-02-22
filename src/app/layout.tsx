@@ -3,9 +3,6 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from './largeComponents/header'
 import Footer from './largeComponents/footer'
-
-import Link from 'next/link'
-import { Suspense } from 'react'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
