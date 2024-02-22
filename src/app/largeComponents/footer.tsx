@@ -2,7 +2,7 @@
 import React,{useState} from 'react'
 import { CiCircleChevDown } from "react-icons/ci";
 import Link from 'next/link'
-function footer() {
+export default function footer() {
   const [buttons,setbuttons] =useState([
     {name:'Project',link:'/Projects',cls:'  bg-black h-fit rounded p-[0.3rem]  m-[1rem]   flex p-[0.6rem] items-center space-x-[1rem] w-fit  hover:shadow-lg shadow-md hover:shadow-[#d9d6d0] shadow-[#d9d6d0] transition ease-in-out delay-50   hover:-translate-y-1 hover:scale-110   '},
    {name:'Skills',link:'/Skills',cls:'h-fit bg-black rounded p-[0.5rem]  m-[1rem]  w-[5rem] flex p-[0.6rem] items-center space-x-[1rem] w-fit   hover:shadow-lg shadow-md hover:shadow-[#d9d6d0] shadow-[#d9d6d0] transition ease-in-out delay-50   hover:-translate-y-1 hover:scale-110  '},
@@ -27,5 +27,4 @@ function footer() {
   )
 }
 
-export default footer
 

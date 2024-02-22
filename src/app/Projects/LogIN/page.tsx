@@ -1,6 +1,23 @@
-import React from 'react'
+'use client'
+import React ,{useState} from 'react'
+import Link from 'next/link'
+import axios from 'axios'
+import { create } from 'domain'
+import { useRouter } from 'next/router'
 
-function page() {
+export default function logInPage() {
+
+  const router = useRouter();
+
+  const [user , setUser] = useState({
+    email:'',
+    password: '',
+    fullName: '' ,
+  })
+
+  const signUp = async () =>{
+
+  }
   return (
     <>
     <section className='flex justify-center  relative py-5' >
@@ -10,24 +27,42 @@ function page() {
          <label className='block text-black text-[1rem] font-serif'>
           <img src='/logInPage Data/nameIcon.webp' className='h-[3rem]'/>
         </label>
-         <input className='rounded p-[0.5rem] placeholder-white  focus:outline-none focus:bg-blue-100 text-black font-bold shadow-md bg-transparent shadow-black/50 hover:bg-white/25 ' placeholder='Enter Your Full Name '>
+         <input 
+          type='text'
+          id='fullName'
+          value={user.fullName} 
+          onChange={(e) => {setUser({...user , fullName: e.target.value})}}
+          className='rounded p-[0.5rem] placeholder-white  focus:outline-none focus:bg-blue-100 text-black font-bold shadow-md bg-transparent shadow-black/50 hover:bg-white/25 ' placeholder='Enter Your Full Name '>
          </input>
         </div>
         <div className='space-y-[0.2rem]'>
          <label className=' block text-black'>
           <img src='/logInPage Data/mail.webp' className='h-[2rem]'/>
          </label>
-         <input className='rounded p-[0.5rem] placeholder-white  focus:outline-none focus:bg-blue-100 text-black font-bold shadow-md bg-transparent shadow-black/50 hover:bg-white/25 ' placeholder='Enter Your Email '></input>
+         <input 
+          type='text'
+          id='email'
+          value={user.email} 
+          onChange={(e) => {setUser({...user , email: e.target.value})}}
+          className='rounded p-[0.5rem] placeholder-white  focus:outline-none focus:bg-blue-100 text-black font-bold shadow-md bg-transparent shadow-black/50 hover:bg-white/25 ' placeholder='Enter Your Email '>
+         </input>
         </div>
         <div className='space-y-[0.2rem]'>
         <label className='block text-black'>
          <img src='/logInPage Data/password.webp' className='h-[2rem]'/>
         </label>
-        <input className='rounded p-[0.5rem] placeholder-white  focus:outline-none focus:bg-blue-100 text-black font-bold shadow-md bg-transparent shadow-black/50 hover:bg-white/25 ' placeholder='Enter Your Password '></input>
+        <input 
+          id='password'
+          type='password'
+          className='rounded p-[0.5rem] placeholder-white  focus:outline-none focus:bg-blue-100 text-black font-bold shadow-md bg-transparent shadow-black/50 hover:bg-white/25 ' 
+          value={user.password} 
+          onChange={(e) => {setUser({...user , password: e.target.value})}}
+          placeholder='Enter Your Password '>
+        </input>
         </div>
         <div className='flex justify-end'>
-          <button type='submit' className='rounded p-[0.5rem] space-x-[0.5rem] focus:outline-none focus:bg-blue-200 text-[#969592] shadow-md shadow-black/25 flex items-center hover:bg-blue-300 mt-3'>
-            <p className='text-black font-mono font-semibold'>Create Account</p>
+          <button onClick={signUp} className='rounded p-[0.5rem] space-x-[0.5rem] focus:outline-none focus:bg-blue-200 text-[#969592] shadow-md shadow-black/25 flex items-center hover:bg-blue-300 mt-3'>
+            <p className='text-black font-mono font-semibold'>sign Up </p>
             <img src='/logInPage Data/create account icon.webp' className='h-[1rem]'/>
           </button>
         </div>
@@ -46,4 +81,4 @@ function page() {
   )
 }
 
-export default page
+
