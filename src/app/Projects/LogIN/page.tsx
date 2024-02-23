@@ -17,11 +17,11 @@ export default function Page() {
 
   const signUp = async () =>{
     const router = useRouter();
-
+    
   }
   return (
     <>
-    <section className='flex justify-center  relative py-5' >
+    <section className='flex justify-center  static border w-fit py-5' >
      <div className="bg-[url('https://static.vecteezy.com/system/resources/previews/022/653/879/non_2x/fantasy-island-with-waterfalls-3d-illustration-elements-of-this-image-furnished-by-nasa-generative-ai-free-photo.jpg')] opacity-70 bg-no-repeat bg-cover bg-center rounded text-white p-[7rem]">
       <form className='bg-white/10 rounded font-mono relative p-10 space-y-1 shadow-xl shadow-black'>
         <div className='space-y-[0.2rem]'>
