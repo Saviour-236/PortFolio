@@ -12,8 +12,8 @@ connect ();
 
 export async function POST(request : NextRequest ) {
     try {
-        const reqBody = request.json()
-        const {fullName ,email ,password} = reqBody 
+        const  reqBody =  request.json();
+        const {fullName ,email ,password} = await  reqBody 
 
         console.log({reqBody});
 
@@ -33,7 +33,7 @@ export async function POST(request : NextRequest ) {
 
        //hashing password 
 
-       const salt = await bcryptjs.gensalt(10)
+       const salt = await bcryptjs.genSalt(10)
        const hashedPassword = await bcryptjs.hash(password,salt)
 
 

@@ -5,17 +5,18 @@ import axios from 'axios'
 import { create } from 'domain'
 import { useRouter } from 'next/router'
 
-export default function logInPage() {
+export default function Page() {
 
-  const router = useRouter();
 
   const [user , setUser] = useState({
+    fullName: '' ,
     email:'',
     password: '',
-    fullName: '' ,
   })
+  const [loading, setLoading] = useState(false)
 
   const signUp = async () =>{
+    const router = useRouter();
 
   }
   return (
