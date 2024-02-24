@@ -13,7 +13,7 @@ export default function footer() {
     
   return (
     <>
-    <div className='fixed bottom-[0.5rem] animate-pulse text-white text-[1rem]  flex justify-center w-full max-md:overflow-auto z-[1] max-md:bottom-[0rem]  max-md:pl-[20rem] max-md:pt-[-3rem '>
+    <div className='sticky bottom-0 animate-pulse text-white text-[1rem]  flex justify-center w-full max-md:overflow-auto z-[1]  max-md:pl-[20rem] max-md:pt-[-3rem '>
     {buttons.map((x,index)=>(
      <Link href={x.link} key={index}>
      <button className={x.cls } >

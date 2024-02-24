@@ -66,8 +66,9 @@ function Header() {
             <div className='hidden '>
             <SocialLinks icons={icons} />
             </div>
-            <Link href='.' ><FaHome className='text-white border text-[1.5rem] rounded bg-[#86a3d1] h-fit z-[1] m-auto'/></Link>
-            <div className='text-white flex space-x-[1rem]'>
+            
+            <div className='text-white flex space-x-[1rem]  items-center'>
+            <Link href='.' className='flex items-center space-x-1'><FaHome className='text-white  text-[0.8rem] rounded    '/>Home</Link>
               {socialIcons.map((x,index)=>(
                 <Link href={x.link} key={index}>{x.icon}</Link>
               ))}

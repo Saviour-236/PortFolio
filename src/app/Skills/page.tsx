@@ -104,7 +104,7 @@ function Skills() {
   }
   return (
   <>
-    <div className='grid grid-cols-4  max-lg:grid-cols-3  text-white place-items-center mb-[5rem] rounded bg-black-800/200 text-center bg-slate z-[] h-full max-lg:mb-[5rem] max-md:grid-cols-2 gap-4'> 
+    <div className='grid grid-cols-4  max-lg:grid-cols-3  text-white place-items-center  rounded bg-black-800/200 text-center bg-slate z-[] h-full  max-md:grid-cols-2 gap-4'> 
     {skills.map((x,index) =>(<Suspense fallback={<Loading/> } >
       <div key ={index} className={x.divCss} >
         <div className={x.imgDivCss} ><Suspense fallback={<Loadingimg/> }>{x.img}</Suspense></div>
