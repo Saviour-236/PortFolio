@@ -5,14 +5,16 @@ import bcryptjs from 'bcryptjs'
 import { stat } from 'fs';
 import { error } from 'console';
 
-
-
 connect ();
 
 
-export async function POST(request : NextRequest ) {
+
+
+export  async function POST(request ) {
     try {
-        const  reqBody =  request.json();
+        
+        const  reqBody = await  request.json();
+        console.log('hlooo haa lg gye loude')
         const {fullName ,email ,password} = await  reqBody 
 
         console.log({reqBody});
@@ -48,6 +50,7 @@ export async function POST(request : NextRequest ) {
 
        return NextResponse.json({massege: 'user creted succesfully' ,success : true, savedUser })
     } catch (error : any) {
+        console.log('bhag mader chod')
         return NextResponse.json({error : error.message},{status:500})
     }
 }

@@ -41,7 +41,7 @@ function Projects() {
       </div>
       <div className='grid grid-cols-3 max-lg:grid-cols-1 grid-coulmn-gap-[1rem]'>
       {Items ('/portfolio.png','PortFolio picture' ,'PortFolio' ,'https://portfolio-839e3.firebaseapp.com/')}
-      {Items ('/logInPage.webp','logInPage Icon' ,'LogIN Page'  ,'Projects/LogIN')}
+      {Items ('/logInPage.webp','logInPage Icon' ,'signup'  ,'Projects/signup')}
       {Items ('/youtube.png','youtube picture' ,'YouTube'  ,'Projects/YouTube')}
       </div>
    

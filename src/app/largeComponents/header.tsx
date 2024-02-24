@@ -1,7 +1,6 @@
 'use client'
 import React ,{useState}from 'react'
 import Link from "next/link"
-import SocialLinks from '../smallComponents/socialLinks'
 import { CiMobile3 } from "react-icons/ci"
 import { IoMailOpenOutline } from "react-icons/io5"
 import { CiLocationOn } from "react-icons/ci"
@@ -63,10 +62,6 @@ function Header() {
               </p>
               <p className='lg:hidden'></p>
             </div>
-            <div className='hidden '>
-            <SocialLinks icons={icons} />
-            </div>
-            
             <div className='text-white flex space-x-[1rem]  items-center'>
             <Link href='.' className='flex items-center space-x-1'><FaHome className='text-white  text-[0.8rem] rounded    '/>Home</Link>
               {socialIcons.map((x,index)=>(
