@@ -10,14 +10,21 @@ connect ();
 
 
 
-export  async function POST(request ) {
+
+export  async function POST(request :NextRequest) {
+    connect ();
     try {
         
+        let a = await request.json();
+        console.log(a)
+        console.log('fetching json')
+        console.log(request.body)
         const  reqBody = await  request.json();
-        console.log('hlooo haa lg gye loude')
+        
+        console.log('fetching done')
         const {fullName ,email ,password} = await  reqBody 
 
-        console.log({reqBody});
+        console.log(reqBody);
 
 
 
@@ -50,7 +57,7 @@ export  async function POST(request ) {
 
        return NextResponse.json({massege: 'user creted succesfully' ,success : true, savedUser })
     } catch (error : any) {
-        console.log('bhag mader chod')
+        console.log('bhag mader chod eror in rques')
         return NextResponse.json({error : error.message},{status:500})
     }
 }

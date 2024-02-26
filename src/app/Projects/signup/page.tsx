@@ -8,7 +8,6 @@ import { toast } from 'react-hot-toast'
 export default function Page() {
   const router = useRouter();
   const [allFilled , setAllfilled] = useState(false)
-
   const [user , setUser] = useState({
     fullName: '' ,
     email:'',
@@ -24,11 +23,11 @@ export default function Page() {
   },[user])
   const [loading, setLoading] = useState(false)
 
-  const signUp = async (event:Event) =>{
-    event.preventDefault();
+  const signUp = async (e:any) =>{
+    e.preventDefault();
     console.log('in sign UP function')
     try {
-      console.log('in try section')
+      console.log('in try section with value of user ',user)
       const response = await axios.post('/api/users/signup', user);
       console.log('signup succes',response.data)
       router.push('signIn')
@@ -50,7 +49,7 @@ export default function Page() {
      <div className='text-black text-center m-[0.5rem] flex items-center  font-bold '>
       <p className=' p-[0.7rem] w-[10rem]  m-auto rounded  bg-white/90 '>Create Account</p> 
      </div>
-      <form className='bg-black/50 rounded font-mono  p-10 space-y-1 shadow-xl shadow-black'>
+      <form onSubmit={signUp} className='bg-black/50 rounded font-mono  p-10 space-y-1 shadow-xl shadow-black'>
         <div className='space-y-[0.2rem]'>
          <label className='block text-[1rem] font-serif'>
           <img src='/logInPage Data/nameIcon.webp' className='h-[3rem]'/>
@@ -89,7 +88,7 @@ export default function Page() {
         </input>
         </div>
         <div className='flex justify-end'>
-          <button onClick={signUp} className='rounded p-[0.5rem] space-x-[0.5rem] focus:outline-none  text-[#969592] shadow-md shadow-black/25 flex items-center hover:bg-blue-100/10 mt-3'>
+          <button type='submit' className='rounded p-[0.5rem] space-x-[0.5rem] focus:outline-none  text-[#969592] shadow-md shadow-black/25 flex items-center hover:bg-blue-100/10 mt-3'>
             <p className='text-white '>
               { allFilled ? 'signUp' : 'please fill all the fields'}
               </p> 
