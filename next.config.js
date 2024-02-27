@@ -3,7 +3,7 @@ const nextConfig = {
     images: {
         domains: ['img.freepik.com',],
       },images: { unoptimized: true } ,
-      output: 'export',
+      
       
 }
 

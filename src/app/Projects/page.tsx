@@ -1,9 +1,6 @@
 'use client'
 import Image from 'next/image'
 import React,{useState} from 'react'
-import Portfolio from './project Links/portfolio'
-import Youtube from './project Links/Youtube'
-import LogInPage from './project Links/loginPage'
 import Link from 'next/link'
 import { FaArrowCircleRight } from "react-icons/fa";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";

@@ -4,7 +4,7 @@ import Link from 'next/link'
 import axios from 'axios'
 import { create } from 'domain'
 import { useRouter } from 'next/navigation';
-import { toast } from 'react-hot-toast'
+import toast, { Toaster } from 'react-hot-toast';
 export default function Page() {
   const router = useRouter();
   const [allFilled , setAllfilled] = useState(false)
@@ -25,31 +25,25 @@ export default function Page() {
 
   const signUp = async (e:any) =>{
     e.preventDefault();
-    console.log('in sign UP function')
     try {
-      console.log('in try section with value of user ',user)
-      const response = await axios.post('/api/users/signup', user);
-      console.log('signup succes',response.data)
+      
+      await axios.post('/api/users/signup', user);
       router.push('signIn')
     } catch (error:any) {
       console.log('sign up failed',error.message)
-      toast.error(error.message);
-    }finally{
-      console.log('in finally section ')
-      
+      toast.error('sign up failed');
     }
-    
   }
-    
+
   return (
     <>
     <section className='flex justify-center  w-full overflow-auto   py-5' >
-      
-     <div className="bg-[url('https://static.vecteezy.com/system/resources/previews/022/653/879/non_2x/fantasy-island-with-waterfalls-3d-illustration-elements-of-this-image-furnished-by-nasa-generative-ai-free-photo.jpg')] opacity-70 bg-no-repeat bg-cover bg-center rounded text-white p-[5rem]">
+    <Toaster />
+     <div className=" rounded text-white ">
      <div className='text-black text-center m-[0.5rem] flex items-center  font-bold '>
-      <p className=' p-[0.7rem] w-[10rem]  m-auto rounded  bg-white/90 '>Create Account</p> 
+      <p className=' m-auto text-white '>Create Account</p> 
      </div>
-      <form onSubmit={signUp} className='bg-black/50 rounded font-mono  p-10 space-y-1 shadow-xl shadow-black'>
+      <form onSubmit={signUp} className='bg-black/50 rounded font-mono  p-10 space-y-1 shadow-sm shadow-white'>
         <div className='space-y-[0.2rem]'>
          <label className='block text-[1rem] font-serif'>
           <img src='/logInPage Data/nameIcon.webp' className='h-[3rem]'/>
@@ -95,13 +89,14 @@ export default function Page() {
             <img src='/logInPage Data/create account icon.webp' className='h-[1rem]'/>
           </button>
         </div>
-        <div className='flex justify-center relative bottom-[-0.7rem] space-x-3  '>
+        <div className='flex justify-center items-center relative bottom-[-0.7rem] space-x-3  '>
             <button>
-              <img  src='/logInPage Data/google.webp' className='h-[2rem] ease-out hover:h-[4rem]'/>
+              <img  src='/logInPage Data/google.webp' className='h-[2rem] duration-300 ease-out hover:h-[2.5rem]'/>
             </button>
             <button>
-             <img  src='/logInPage Data/github.webp' className='h-[2rem] ease-out hover:h-[4rem]'/>
+             <img  src='/logInPage Data/github.webp' className='h-[2rem] ease-out duration-300 hover:h-[2.5rem]'/>
             </button>
+            <Link href={'signIn'} className='hover:underline'>Sign In</Link>
         </div>
       </form>
      </div>

@@ -99,7 +99,9 @@ function Skills() {
   }
   function Loadingimg(){
     return(
-      <div className='opacity-[0] p-[2rem] rounded-full'></div>
+      
+      <img src='/loading.gif' className='m-auto'></img>
+   
     )
   }
   return (

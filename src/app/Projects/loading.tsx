@@ -1,7 +1,7 @@
 import React from 'react'
 
 function loading() {
-  return (
+  return (/*
     <>
     <section>
       <div className='grid grid-cols-3 max-lg:grid-cols-1 grid-coulmn-gap-[1rem]'>
@@ -15,6 +15,10 @@ function loading() {
          </div>
       </div>
    
+    </sect*/
+    <>
+    <section className='items-center justify-center'>
+      <img src='/loading.gif' className='m-auto'></img>
     </section>
     </>
   )

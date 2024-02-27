@@ -15,6 +15,11 @@ function loading() {
   ])
   return (
     <>
+    <section className='items-center justify-center'>
+      <img src='/loading.gif' className='m-auto'></img>
+    </section>
+    </>
+    /*<>
      <div className='grid grid-cols-4 space-y-[1rem] max-lg:grid-cols-3  place-items-center m-[1rem] rounded bg-black-800/200 text-center h-full max-lg:mb-[5rem] max-md:grid-cols-2 gap-4'> 
       {skills.map(x =>(
       <div className={x.divCss}>
@@ -23,7 +28,8 @@ function loading() {
       </div>
      ))}
    </div>
-    </>
+    </>*/
+
   )
 }
 
