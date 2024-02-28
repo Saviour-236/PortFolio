@@ -1,13 +1,44 @@
 'use client'
-import React, { useState } from 'react'
+import React ,{useEffect, useState} from 'react'
+import Link from 'next/link'
+import axios from 'axios'
+import { create } from 'domain'
+import { useRouter } from 'next/navigation';
+import toast, { Toaster } from 'react-hot-toast';
 import { FaRegEye } from "react-icons/fa6";
 import { FaRegEyeSlash } from "react-icons/fa";
-import Link from 'next/link'
 function page() {
+  const router = useRouter();
   const[visiblePassword,setVisiblePassword] = useState<boolean>(false)
+  const [allFilled , setAllfilled] = useState(false)
+  const [user , setUser] = useState({
+    email:'',
+    password: '',
+  })
+  const toastForAllFilledMessage=()=>(toast('please fill all the fields'))
+  useEffect(()=>{
+    if(user.email.length > 0 && user.password.length > 0){
+    setAllfilled(true)
+    }
+    else{
+     setAllfilled(false)
+    }
+   },[user])
+   const signIn = async (e:any) =>{
+    e.preventDefault();
+    try {
+      toast('processing')
+      const response = await axios.post('/api/users/signIn', user);
+      toast.success(response.data.massege)
+      router.push('Profile')
+    } catch (error:any) {
+      toast.error(error.message);
+    }
+  }
   return (
   <>
   <section className=' items-center space-y-3 text-white p-[1rem]'>
+  <Toaster />
     <p className='text-center'>Sign In</p>
     <form className=' border m-auto p-[1rem] space-y-3 w-fit  bg-black/50 rounded'>
       <div className='space-y-[0.5rem]'>
@@ -22,12 +53,12 @@ function page() {
       </button>
       </div>
       <div className='flex  justify-end   '>
-      <button type='submit' className='rounded p-[0.3rem] space-x-[0.5rem] hover:scale-110 transition duration-150 ease-in text-[#969592] shadow-md border flex items-center '>
-            <p className='text-white '>
-            SignIn
-              </p> 
-            <img src='/logInPage Data/create account icon.webp' className='h-[1rem]'/>
-          </button>
+      { allFilled ? 
+             <button type='submit' className='rounded p-[0.5rem] space-x-[0.5rem] focus:outline-none  text-[#969592] shadow-md shadow-black/25 flex items-center hover:bg-blue-100/10 mt-3'>
+              signUp 
+              <img src='/logInPage Data/create account icon.webp' className='h-[1rem]'/>
+             </button>
+             : <button onClick={toastForAllFilledMessage} type='button' className='text-white hover:text-[1.1rem]'>signIn</button>}
       </div>
     </form>
     <div className='flex justify-center relative bottom-[-0.7rem] space-x-3  '>
@@ -37,7 +68,7 @@ function page() {
             <button>
              <img  src='/logInPage Data/github.webp' className='h-[2rem] ease-out duration-300 hover:h-[2.5rem]'/>
             </button>
-            <Link href={'signup'}>Sign Up</Link>
+            <Link href={'signup'} onClick={()=>toast('In SignUp Page')} className='hover:underline'>Sign Up</Link>
         </div>
   </section>
   </>

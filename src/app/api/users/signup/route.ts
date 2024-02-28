@@ -2,8 +2,7 @@ import {connect} from '@/dbConfig/dbConfig'
 import User from '@/models/user.models';
 import {NextRequest , NextResponse} from 'next/server'
 import bcryptjs from 'bcryptjs'
-import { stat } from 'fs';
-
+import { stat } from 'fs'
 connect ();
 
 
@@ -22,9 +21,6 @@ export  async function POST(request :NextRequest) {
        if (user.length>0){
        return NextResponse.json({error : 'user already exits'},{status:400})
        }
-
-
-
 
        //hashing password 
 

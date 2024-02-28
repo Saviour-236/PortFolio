@@ -22,26 +22,27 @@ export default function Page() {
    }
   },[user])
   const [loading, setLoading] = useState(false)
-
   const signUp = async (e:any) =>{
     e.preventDefault();
     try {
-      
-      await axios.post('/api/users/signup', user);
+      setLoading(true)
+      const response = await axios.post('/api/users/signup', user);
+      toast.success(response.data.massege)
       router.push('signIn')
     } catch (error:any) {
-      console.log('sign up failed',error.message)
-      toast.error('sign up failed');
+      toast.error(error.message);
+    }finally{
+      setLoading(false)
     }
   }
-
+const toastForAllFilledMessage=()=>(toast('please fill all the fields'))
   return (
     <>
     <section className='flex justify-center  w-full overflow-auto   py-5' >
     <Toaster />
      <div className=" rounded text-white ">
      <div className='text-black text-center m-[0.5rem] flex items-center  font-bold '>
-      <p className=' m-auto text-white '>Create Account</p> 
+      <p className=' m-auto text-white '>{loading ? 'processing' :'Create Account'}</p> 
      </div>
       <form onSubmit={signUp} className='bg-black/50 rounded font-mono  p-10 space-y-1 shadow-sm shadow-white'>
         <div className='space-y-[0.2rem]'>
@@ -82,12 +83,15 @@ export default function Page() {
         </input>
         </div>
         <div className='flex justify-end'>
-          <button type='submit' className='rounded p-[0.5rem] space-x-[0.5rem] focus:outline-none  text-[#969592] shadow-md shadow-black/25 flex items-center hover:bg-blue-100/10 mt-3'>
-            <p className='text-white '>
-              { allFilled ? 'signUp' : 'please fill all the fields'}
-              </p> 
-            <img src='/logInPage Data/create account icon.webp' className='h-[1rem]'/>
-          </button>
+          
+             { allFilled ? 
+             <button type='submit' className='rounded p-[0.5rem] space-x-[0.5rem] focus:outline-none  text-[#969592] shadow-md shadow-black/25 flex items-center hover:bg-blue-100/10 mt-3'>
+              signUp 
+              <img src='/logInPage Data/create account icon.webp' className='h-[1rem]'/>
+             </button>
+             : <button onClick={toastForAllFilledMessage} type='button' className='text-white hover:text-[1.1rem]'>signUp</button>}
+            
+          
         </div>
         <div className='flex justify-center items-center relative bottom-[-0.7rem] space-x-3  '>
             <button>
@@ -96,7 +100,7 @@ export default function Page() {
             <button>
              <img  src='/logInPage Data/github.webp' className='h-[2rem] ease-out duration-300 hover:h-[2.5rem]'/>
             </button>
-            <Link href={'signIn'} className='hover:underline'>Sign In</Link>
+            <Link href={'signIn'} onClick={()=>toast('In SignIn Page')} className='hover:underline'>Sign In</Link>
         </div>
       </form>
      </div>
