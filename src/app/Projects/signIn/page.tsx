@@ -89,7 +89,7 @@ function page() {
             <button>
              <img  src='/logInPage Data/github.webp' className='h-[2rem] ease-out duration-300 hover:h-[2.5rem]'/>
             </button>
-            <Link href={'signup'}  onClick={()=>toast('In SignUp Page')}  className='hover:underline'>Sign Up</Link>
+            <Link href={'signup'}    className='hover:underline'>Sign Up</Link>
         </div>
   </section>
   </>

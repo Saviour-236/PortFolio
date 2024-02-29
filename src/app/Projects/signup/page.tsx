@@ -100,7 +100,7 @@ const toastForAllFilledMessage=()=>(toast('please fill all the fields'))
             <button>
              <img  src='/logInPage Data/github.webp' className='h-[2rem] ease-out duration-300 hover:h-[2.5rem]'/>
             </button>
-            <Link href={'signIn'} onClick={()=>toast('In SignIn Page')} className='hover:underline'>Sign In</Link>
+            <Link href={'signIn'}  className='hover:underline'>Sign In</Link>
         </div>
       </form>
      </div>
