@@ -30,7 +30,7 @@ export default function Home() {
   const [a,seta] = useState(4)
 return (
   <><Suspense fallback={<Loading/>}>
-    < section className=" bg-neutral-800/20 relative  m-auto shadow- [0_35px_60px_-15px_rgba(0,0,0,0.3)]  ]  font-serif rounded h-fit w-fit  space-y-3 pb-[3rem]" >
+    < section className=" bg-neutral-800/20 relative  m-auto shadow- [0_35px_60px_-15px_rgba(0,0,0,0.3)]  ]  font-serif rounded h-fit w-fit p-[1rem] space-y-3 pb-[3rem]" >
                  <div className=' relative flex lg:hidden  h-[15rem]  w-[15rem] m-auto  rounded-full shadow-lg shadow-[#f2f0eb]  items-center align-middle overflow-hidden '  >
                     <img src='/myImg.jpeg' className='opacity-[0.6]'/>
                   </div>

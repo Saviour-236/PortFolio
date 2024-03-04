@@ -83,15 +83,12 @@ const toastForAllFilledMessage=()=>(toast('please fill all the fields'))
         </input>
         </div>
         <div className='flex justify-end'>
-          
              { allFilled ? 
              <button type='submit' className='rounded p-[0.5rem] space-x-[0.5rem] focus:outline-none  text-[#969592] shadow-md shadow-black/25 flex items-center hover:bg-blue-100/10 mt-3'>
               signUp 
               <img src='/logInPage Data/create account icon.webp' className='h-[1rem]'/>
              </button>
              : <button onClick={toastForAllFilledMessage} type='button' className='text-white hover:text-[1.1rem]'>signUp</button>}
-            
-          
         </div>
         <div className='flex justify-center items-center relative bottom-[-0.7rem] space-x-3  '>
             <button>

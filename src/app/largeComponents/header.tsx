@@ -42,14 +42,13 @@ function Header() {
     <>
       <Suspense fallback={<Loading/>}>
        <div className=" item-center z-[1] sticky top-0 flex place-content-between h-fit-content items-center   text-[1.3rem] font-serif ">
-        
             <div className=' flex items-center mx-[1rem] m-[0.5rem]  max-lg:m-[0rem]  text-white   space-x-[3rem] max-lg:space-x-[1rem] font-bold '>
               <button onClick={()=>setlogoClicked(!logoClicked)} className='rounded-full  border items-center overflow-hidden '>
-                {logoClicked ?<div className='absolute top-[0] left-[0] items-center flex  z-[100] bg-gray-500/30 w-full h-full'><Image
+                {logoClicked ?<div className='absolute top-[0] left-[0] h-[100vh] w-[100vw] border items-center flex  z-[10001] bg-gray-500/30 justify-center'><Image
                   src={a}
                   alt="Profiel Pic"
-                  width={570}
-                  height={570}
+                  width={600}
+                  height={600}
                   /></div>:<Image
                   src={a}
                   alt="Profiel Pic"
